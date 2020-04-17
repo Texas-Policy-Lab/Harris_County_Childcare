@@ -9,7 +9,6 @@ config = read_yaml()
 zip = pd.read_csv("./data/uszips.csv")
 zip = zip[zip['county_fips'].isin(config['fips'])]
 
-driver = swebdriver()
-navigate_page()
+driver = swebdriver(url = config['url'])
 
 import pdb; pdb.set_trace()
